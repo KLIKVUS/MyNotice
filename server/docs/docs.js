@@ -20,14 +20,10 @@ const swaggerDocs = {
 
 
     servers: [
-        // {
-        //     description: "Production dev",
-        //     url: "https://petstore.swagger.io/api"
-        // },
-        // {
-        //     url: "https://virtserver.swaggerhub.com/KLIKVUS/MyNoticeAPI/1.0.0",
-        //     description: "SwaggerHub API Auto Mocking"
-        // },
+        {
+            description: "Production dev",
+            url: "https://my-notice--backend.herokuapp.com/api"
+        },
         {
             url: "http://localhost:8080/api",
             description: "Local dev"
