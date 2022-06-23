@@ -1,0 +1,27 @@
+{
+  "name": "mynotice",
+  "version": "1.0.0",
+  "description": "In this app you can create notifications and share whith your team or friends.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KLIKVUS/MyNotice.git"
+  },
+  "author": "KLIKVUS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KLIKVUS/MyNotice/issues"
+  },
+  "homepage": "https://github.com/KLIKVUS/MyNotice#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-validator": "^6.14.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.0",
+    "swagger-ui-express": "^4.4.0"
+  }
+}

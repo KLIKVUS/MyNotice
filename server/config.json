@@ -1,0 +1,17 @@
+{
+    "PORT": {
+        "value": 8080,
+        "description": "Локальный порт сервера"
+    },
+    "DBLogin": {
+        "value": "admin",
+        "description": "Логин для входа в бд"
+    },
+    "DBPassword": {
+        "value": "c8vpVxprXexziNVG",
+        "description": "Пароль для входа в бд"
+    },
+    "DBUri": {
+        "$ref": "#/DBPassword"
+    }
+}
