@@ -1,8 +1,7 @@
 const { validationResult } = require("express-validator");
 
-const { User } = require("../db/models");
+const { User, Group } = require("../db/models");
 const statuses = require("./controllerFunctions/statuses");
-const JWT = require("./controllerFunctions/jwt");
 
 
 class AuthController {
@@ -23,7 +22,17 @@ class AuthController {
                 },
                 (err) => {
                     if (err) return statuses.Status400(res, err.errors);
-                    return statuses.Status200(res);
+
+                    Group.findByIdAndUpdate(
+                        {"_id": groupid},
+                        {
+                            "$inc": {"subscribers": 1}
+                        },
+                        (err, result) => {
+                            if (err) return statuses.Status400(res, err.errors);
+                            return statuses.Status201(res);
+                        }
+                    )
                 })
         } catch (err) {
             console.log(err);
