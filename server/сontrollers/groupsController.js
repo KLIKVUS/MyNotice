@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const { validationResult } = require("express-validator");
 
 const { Group, Notifications } = require("../db/models");
@@ -24,7 +25,17 @@ class GroupsController {
             Group.find(searchParams, (err, result) => {
                 if (err) return statuses.Status400(res, err.errors);
                 if (!result.length) return statuses.Status400(res, "there is no such group");
-                return statuses.Status200(res, result);
+
+                let filteredResult = { owns: [], signed: [] };
+                for (let group of result) {
+                    if (group.owner == userid) {
+                        filteredResult.owns.push(group);
+                        continue;
+                    }
+                    filteredResult.signed.push(group);
+                }
+
+                return statuses.Status200(res, filteredResult);
             })
         } catch (err) {
             console.log(err);
