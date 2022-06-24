@@ -1,0 +1,21 @@
+.item--add-form {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    justify-content: center !important;
+
+    &__input {
+        padding: 5px 0;
+        font-size: 18px;
+        text-align: center;
+        background-color: unset;
+    }
+
+    &__btn {
+        margin: 0 auto;
+        margin-top: 10px;
+        font-size: 20px;
+        position: relative;
+        background-color: unset;
+    }
+}

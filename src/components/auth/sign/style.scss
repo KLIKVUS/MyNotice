@@ -1,0 +1,62 @@
+.auth-wrapper {
+    margin: auto;
+
+    &__title {
+        text-align: center;
+        font-size: 28px;
+        font-family: "Montserrat-Semibold", sans-serif;
+    }
+
+    &__form {
+        margin-top: 20px;
+
+        &-item {
+            position: relative;
+            margin-bottom: 15px;
+
+            & input {
+                width: 100%;
+                padding: 5px 0;
+                background-color: unset;
+            }
+
+            &::before {
+                content: "";
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                background-color: #333;
+            }
+        }
+
+        &-btn,
+        &-link {
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+        }
+
+        &-btn {
+            width: 150px;
+            padding: 5px;
+            margin-top: 25px;
+            background-color: #f1b24a;
+        }
+
+        &-link {
+            font-size: 14px;
+
+            height: 20px;
+            width: max-content;
+            margin-top: 10px;
+            border-bottom: 1px solid #333;
+
+            transition: border 0.2s;
+
+            &:hover {
+                border-bottom: 3px solid #f1b24a;
+            }
+        }
+    }
+}

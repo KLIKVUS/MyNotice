@@ -1,0 +1,27 @@
+.nav {
+    width: 50%;
+    min-width: 320px;
+    padding: 10px 25px;
+    margin-bottom: 50px;
+    background-color: #F29A99;
+
+    display: flex;
+    justify-content: space-around;
+
+    &__link, &__link--mark {
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        border-right: 3px solid #fff;
+        background-color: unset;
+
+        &:last-child {
+            border-right: unset;
+        }
+
+        &.active {
+            text-decoration: underline;
+        }
+    }
+}
