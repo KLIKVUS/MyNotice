@@ -21,4 +21,8 @@ router.delete('/dell/:id', [
     check("id").notEmpty().isString(),
 ], JWT.Check, groupsController.deleteGroup)
 
+router.get('/getGroupsByName/:title', [
+    check("title").notEmpty().isString()
+], JWT.Check, groupsController.getGroupsByName);
+
 module.exports = router;

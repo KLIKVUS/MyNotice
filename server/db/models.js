@@ -40,6 +40,8 @@ const groupSchema = new Schema({
         default: 0
     }
 }, { versionKey: false })
+groupSchema.index({"title": "text", "owner": "groupOwner"})
+console.log(groupSchema.indexes());
 groupSchema.pre(["remove", "deleteOne", "deleteMany"], async function(next) {
     try {
         await Notifications.deleteOne({
